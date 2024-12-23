@@ -11,6 +11,7 @@
 	export let vimeoId = "";
 	export let darken = false;
 	export let backdrop = false;
+	export let flip =false;
   
 	let viewportHeight: number;
 	let viewportWidth: number;
@@ -62,10 +63,10 @@
   
 	  {#if darken}
 		<div
-		  class="bg-darken-gradient pointer-events-none absolute w-full h-full top-0 left-0 -z-10"
+		  class="{flip?"rotate-180":""} bg-darken-gradient pointer-events-none absolute w-full h-full top-0 left-0 -z-10"
 		></div>
 		<div
-		  class="bg-darken-gradient-2 pointer-events-none absolute w-full h-full top-0 left-0 -z-10"
+		  class=" {flip?"rotate-180":""} bg-darken-gradient-2 pointer-events-none absolute w-full h-full top-0 left-0 -z-10"
 		></div>
 	  {/if}
 	
