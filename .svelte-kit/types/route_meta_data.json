@@ -2,6 +2,10 @@
 	"/": [
 		"src/routes/+layout.server.js"
 	],
+	"/[[preview=preview]]/about": [
+		"src/routes/[[preview=preview]]/about/+page.server.ts",
+		"src/routes/+layout.server.js"
+	],
 	"/api/preview": [
 		"src/routes/api/preview/+server.js"
 	],

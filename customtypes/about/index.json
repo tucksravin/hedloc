@@ -1,0 +1,153 @@
+{
+  "format": "page",
+  "id": "about",
+  "label": "About",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "hero_header": {
+        "type": "Text",
+        "config": {
+          "label": "hero header",
+          "placeholder": ""
+        }
+      },
+      "hero_body": {
+        "type": "Text",
+        "config": {
+          "label": "hero body",
+          "placeholder": ""
+        }
+      },
+      "hero_image": {
+        "type": "Image",
+        "config": {
+          "label": "hero image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "team_header": {
+        "type": "Text",
+        "config": {
+          "label": "team header",
+          "placeholder": ""
+        }
+      },
+      "team_member": {
+        "type": "Group",
+        "config": {
+          "label": "team member",
+          "repeat": true,
+          "fields": {
+            "name": {
+              "type": "Text",
+              "config": {
+                "label": "name",
+                "placeholder": ""
+              }
+            },
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "headshot": {
+              "type": "Image",
+              "config": {
+                "label": "headshot",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "body": {
+              "type": "StructuredText",
+              "config": {
+                "label": "body",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
+      "headquarters_header": {
+        "type": "Text",
+        "config": {
+          "label": "headquarters header",
+          "placeholder": ""
+        }
+      },
+      "hq_image_one": {
+        "type": "Image",
+        "config": {
+          "label": "hq_image_one",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "hq_image_two": {
+        "type": "Image",
+        "config": {
+          "label": "hq_image_two",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "hq_image_three": {
+        "type": "Image",
+        "config": {
+          "label": "hq_image_three",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "hq_image_four": {
+        "type": "Image",
+        "config": {
+          "label": "hq_image_four",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

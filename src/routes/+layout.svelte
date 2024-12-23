@@ -1,14 +1,20 @@
-<script>
+<script lang='ts'>
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
+	import logo from '$lib/assets/icons/logos/logoFull.svg'
+	import logoSmall from '$lib/assets/icons/logos/logo.svg'
 	import "../app.css";
+  import ContentWidth from '$lib/components/ContentWidth/ContentWidth.svelte';
 	/**
 	 * @typedef {Object} Props
 	 * @property {import('svelte').Snippet} [children]
 	 */
 
 	/** @type {Props} */
+
+	let viewportWidth=$state(1024);
+
 	let { children } = $props();
 </script>
 
@@ -26,8 +32,39 @@
 	{/if}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 </svelte:head>
+<svelte:window bind:innerWidth={viewportWidth} />
 <main>
-	<a href="/" class="z-30 font-bold text-dark bg-light fixed bottom-4 right-4 pt-2.5 pb-2 px-4 rounded-full hover:bg-dark hover:text-white transition-all duration-300 active:-translate-y-2">Home</a>
+	<header class="absolute top-0 left-0 w-screen h-24 z-20">
+		<ContentWidth class="h-full flex flex-row justify-between items-center">
+			<a href="/" class="bump"><img src={viewportWidth> 768?logo:logoSmall} class="h-5 hover:opacity-80 transition-opacity" alt="hedloc investment co"/></a>
+			<div class="flex flex-row text-white gap-6 uppercase">
+				<a href='/about' class="hover:opacity-80 transition-opacity">About</a>
+				<a href='/about#contact' class="hover:opacity-80 transition-opacity">Contact Us</a>
+			</div>
+		</ContentWidth>
+	</header>
 	{@render children?.()}
+
+	<footer class="h-72 py-12 text-white">
+		<ContentWidth class="flex flex-row justify-start">
+			<a href="/" class="bump"><img src={viewportWidth> 768?logo:logoSmall} class="h-5 hover:opacity-80 transition-opacity" alt="hedloc investment co"/></a>
+		</ContentWidth>
+		<ContentWidth class="h-full flex flex-row justify-between items-start mt-12">
+			<div class="flex flex-row justify-start gap-16">
+				<div>
+				223 West Wall Street, Suite 300 <br/> Midland, TX 79701 <br/> <br/> P.O. Box 882 | Midland, TX 79702
+				</div>
+				<div>
+					P: 432.253.7808  <br/> F: 432.253.7840
+				</div>
+			</div>
+			<div class='flex flex-col gap-3'>
+				<a href='/' class="hover:opacity-80 transition-opacity">Home</a>
+				<a href='/about' class="hover:opacity-80 transition-opacity">About</a>
+				<a href='/about#contact' class="hover:opacity-80 transition-opacity">Contact Us</a>
+			</div>
+		</ContentWidth>
+
+	</footer>
 </main>
 <PrismicPreview {repositoryName} />
