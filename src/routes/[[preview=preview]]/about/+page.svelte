@@ -86,12 +86,12 @@
     </ContentWidth>
 
   </section>
-  <section class="bg-[#cac2b3] pt-48 pb-16">
+  <section class="bg-[#cac2b3] pt-48 pb-16" id="contact">
     <ContentWidth class="flex items-start justify-start">
         <h2 class="text-primary mb-16">Contact Us</h2>
     </ContentWidth>
     <ContentWidth>
-        <form class="w-full flex flex-col bg-primary text-white gap-10 p-10" id="contact" name="contact" method="post" bind:this={form} netlify netlify-honeypot="bot-field">
+        <form class="w-full flex flex-col bg-primary text-white gap-10 p-10" name="contact" method="post" bind:this={form} netlify netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
             
             <div class="w-full flex flex-row">
