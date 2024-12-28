@@ -96,21 +96,21 @@
             
             <div class="w-full flex flex-row">
                 <div class="w-1/12">Name</div>
-                <input class="w-11/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6 pt-[2.5px]" name="name" type="text"/>    
+                <input class="w-11/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="name" type="text"/>    
             </div>
 
             <div class="w-full flex flex-row justify-start">
                 <div class="w-1/12">Email</div>
-                <input class="w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6 pt-[2.5px]" name="email" type="email"/>    
+                <input class="w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="email" type="email"/>    
                 <div class="w-0 md:w-1/6"></div>
                 <div class="w-1/12">Phone</div>
-                <input class="w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6 pt-[2.5px]" name="phone" type="phone"/>    
+                <input class="w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="phone" type="phone"/>    
          
             </div>
 
             <div class="w-full flex flex-row">
                 <div class="w-1/12">Message</div>
-                <textarea class="w-11/12 border-[1px] rounded-[3px] text-dark border-light h-48 pl-4 pt-[2.5px]" name="message"></textarea>
+                <textarea class="w-11/12 border-[1px] rounded-[3px] text-dark border-light h-48 pl-6 pt-2" name="message"></textarea>
             </div>
                 <div class="ml-auto mr-20 w-16">
                     <button onclick={submit} class="mt-8 button-text transition w-36 h-9 border-2 border-white text-white hover:bg-white active:bg-dark active:text-white hover:text-dark flex items-center justify-center">Submit</button>
