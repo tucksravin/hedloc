@@ -22,8 +22,8 @@
   <svelte:window bind:innerWidth={viewportWidth} />
 
   <ScreenWidthImage darken flip field={data.page.data.hero_image} class="flex flex-col items-start justify-end py-36 gap-6">
-    <h1 class="text-white max-w-screen-md">{content.hero_header||''}</h1>
-    <div class="max-w-screen-md text-white whitespace-pre-line flex flex-col gap-2">
+    <h1 class="text-white max-w-screen-lg">{content.hero_header||''}</h1>
+    <div class="max-w-screen-lg text-white whitespace-pre-line flex flex-col gap-2">
       <p>{content.hero_body} </p>
     </div>
   
@@ -32,10 +32,10 @@
     <ContentWidth class="text-white mb-10">
         <h2>{content.team_header}</h2>
     </ContentWidth>
-    <ContentWidth class="flex flex-col md:flex-row justify-end relative md:h-[600px] gap-10" >
-        <div class="md:w-1/4 flex flex-col items-start justify-start gap-2 z-20" id="team-top">
+    <ContentWidth class="flex flex-col lg:flex-row justify-end relative lg:h-[600px] gap-10" >
+        <div class="lg:w-1/4 flex flex-col items-start justify-start gap-2 z-20" id="team-top">
             {#if active>-1}
-            <button transition:fade={{duration:150}} onclick={()=>active=-1} class="hidden md:flex flex-col items-start justify-start gap-2 text-white">
+            <button transition:fade={{duration:150}} onclick={()=>active=-1} class="hidden lg:flex flex-col items-start justify-start gap-2 text-white">
                 <PrismicImage class="w-full aspect-[3/4]" field={content.team_member[active].headshot||''} />
                 <h4>{content.team_member[active].name}</h4>
                 <h5>{content.team_member[active].title}</h5>
@@ -51,7 +51,7 @@
         {#each content.team_member as p, i}
         <button 
             onclick={()=>{if(active===i){ active=-1}else{active=i; document.getElementById('team-top')?.scrollIntoView({behavior:'smooth', block: 'start'})}}} 
-            class="md:w-1/4 members flex flex-col items-start justify-start gap-2 {active!==-1?"pointer-events-none":""}">
+            class="lg:w-1/4 members flex flex-col items-start justify-start gap-2 {active!==-1?"pointer-events-none":""}">
             <PrismicImage class="w-full aspect-[3/4] object-cover mb-4" field={content.team_member[i].headshot} />
             <h4>{content.team_member[i].name}</h4>
             <h5>{content.team_member[i].title}</h5>
@@ -61,7 +61,7 @@
         {/each}
         <div class="w-full h-full absolute bg-light flex flex-col justify-start items-end z-20 pointer-events-none transition-opacity duration-150 {active===-1?"opacity-0":""}">
             {#if active>-1}
-                <div class="text-white md:w-2/3" in:fade={{duration:150, delay: 150}} out:fade={{duration:150}}>
+                <div class="text-white lg:w-2/3" in:fade={{duration:150, delay: 150}} out:fade={{duration:150}}>
                     <button transition:fade={{duration:150}} onclick={()=>active=-1} class="flex flex-col items-start justify-start gap-2 text-white">
                         <PrismicImage class="w-full aspect-[3/4]" field={content.team_member[active].headshot||''} />
                         <h4>{content.team_member[active].name}</h4>
@@ -87,13 +87,13 @@
         <h2 class="text-primary">{content.headquarters_header}</h2>
     </ContentWidth>
     <ContentWidth class="flex flex-col mt-16">
-        <div class="flex md:flex-row mb-10">
-            <PrismicImage field={content.hq_image_one} class="h-[500px] md:w-3/4 object-cover mr-5" />
-            <PrismicImage field={content.hq_image_two} class="h-[500px] md:w-1/4 object-cover ml-5"/>
+        <div class="flex lg:flex-row mb-10">
+            <PrismicImage field={content.hq_image_one} class="h-[500px] lg:w-3/4 object-cover mr-5" />
+            <PrismicImage field={content.hq_image_two} class="h-[500px] lg:w-1/4 object-cover ml-5"/>
         </div>
-        <div class="flex md:flex-row mb-10">
-            <PrismicImage field={content.hq_image_three} class="h-[300px] md:w-1/2 object-cover mr-5" />
-            <PrismicImage field={content.hq_image_four} class="h-[300px] md:w-1/2 object-cover ml-5"/>
+        <div class="flex lg:flex-row mb-10">
+            <PrismicImage field={content.hq_image_three} class="h-[300px] lg:w-1/2 object-cover mr-5" />
+            <PrismicImage field={content.hq_image_four} class="h-[300px] lg:w-1/2 object-cover ml-5"/>
         </div>
     </ContentWidth>
 
@@ -103,26 +103,26 @@
         <h2 class="text-primary mb-16">Contact Us</h2>
     </ContentWidth>
     <ContentWidth>
-        <form class="w-full flex flex-col bg-primary text-white gap-8 md:gap-10 p-4 md:p-10" name="contact" method="post" bind:this={form} netlify netlify-honeypot="bot-field">
+        <form class="w-full flex flex-col bg-primary text-white gap-8 lg:gap-10 p-4 lg:p-10" name="contact" method="post" bind:this={form} netlify netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
             
-            <div class="w-full flex flex-col md:flex-row">
-                <div class="md:w-1/12">Name</div>
-                <input class="md:w-11/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="name" type="text"/>    
+            <div class="w-full flex flex-col lg:flex-row">
+                <div class="lg:w-1/12">Name</div>
+                <input class="lg:w-11/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="name" type="text"/>    
             </div>
 
-            <div class="w-full flex flex-col md:flex-row justify-start">
-                <div class="md:w-1/12">Email</div>
-                <input class="md:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="email" type="email"/>    
-                <div class="w-0 h-8 md:h-0 md:w-1/6"></div>
-                <div class="md:w-1/12">Phone</div>
-                <input class="md:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="phone" type="phone"/>    
+            <div class="w-full flex flex-col lg:flex-row justify-start">
+                <div class="lg:w-1/12">Email</div>
+                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="email" type="email"/>    
+                <div class="w-0 h-8 lg:h-0 lg:w-1/6"></div>
+                <div class="lg:w-1/12">Phone</div>
+                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="phone" type="phone"/>    
          
             </div>
 
-            <div class="w-full flex flex-col md:flex-row">
-                <div class="md:w-1/12">Message</div>
-                <textarea class="md:w-11/12 border-[1px] rounded-[3px] text-dark border-light h-48 pl-6 pt-2" name="message"></textarea>
+            <div class="w-full flex flex-col lg:flex-row">
+                <div class="lg:w-1/12">Message</div>
+                <textarea class="lg:w-11/12 border-[1px] rounded-[3px] text-dark border-light h-48 pl-6 pt-2" name="message"></textarea>
             </div>
                 <div class="ml-auto mr-20 w-16">
                     <button onclick={submit} class="mt-8 button-text transition w-36 h-9 border-2 border-white text-white hover:bg-white active:bg-dark active:text-white hover:text-dark flex items-center justify-center">Submit</button>
