@@ -12,7 +12,7 @@ import ScreenWidthImage from "$lib/components/ScreenWidth/ScreenWidthImage.svelt
 </script>
 <svelte:window bind:innerWidth={viewportWidth} />
 
-<ScreenWidthImage darken field={data.page.data.hero_image} class="flex flex-col items-start justify-end py-36 gap-6">
+<ScreenWidthImage darken field={data.page.data.hero_image} class="flex flex-col items-start justify-end py-16 md:py-36 gap-6">
   <h1 class="text-white max-w-screen-md">{content.headline||''}</h1>
   <div class="max-w-screen-md text-white whitespace-pre-line flex flex-col gap-2">
     <PrismicRichText  field={content.hero_body} />

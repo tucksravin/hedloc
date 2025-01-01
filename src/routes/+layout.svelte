@@ -45,12 +45,12 @@
 	</header>
 	{@render children?.()}
 
-	<footer class="h-72 py-12 text-white">
+	<footer class="md:h-72 py-12 text-white">
 		<ContentWidth class="flex flex-row justify-start">
 			<a href="/" class="bump"><img src={viewportWidth> 768?logo:logoSmall} class="h-5 hover:opacity-80 transition-opacity" alt="hedloc investment co"/></a>
 		</ContentWidth>
-		<ContentWidth class="h-full flex flex-row justify-between items-start mt-12">
-			<div class="flex flex-row justify-start gap-16">
+		<ContentWidth class="h-full flex flex-col md:flex-row justify-between items-start mt-12">
+			<div class="flex flex-col md:flex-row justify-start gap-16">
 				<div>
 				223 West Wall Street, Suite 300 <br/> Midland, TX 79701 <br/> <br/> P.O. Box 882 | Midland, TX 79702
 				</div>
@@ -58,7 +58,7 @@
 					P: 432.253.7808  <br/> F: 432.253.7840
 				</div>
 			</div>
-			<div class='flex flex-col gap-3'>
+			<div class='flex flex-col gap-3 mt-16 md:mt-0'>
 				<a href='/' class="hover:opacity-80 transition-opacity">Home</a>
 				<a href='/about' class="hover:opacity-80 transition-opacity">About</a>
 				<a href='/about#contact' class="hover:opacity-80 transition-opacity">Contact Us</a>

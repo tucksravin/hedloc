@@ -159,7 +159,7 @@ text-transform: uppercase;
 
 @media only screen and (max-width:786px) {
     h1{
-        font-size: 36px;
+        font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: 44px; /* 121.212% */
@@ -174,11 +174,21 @@ text-transform: uppercase;
     
     
     p{
-        font-size: 16px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px; /* 150% */
     }
+
+    header, form{
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.44px;
+        text-transform: uppercase;
+        }
     
 
     
