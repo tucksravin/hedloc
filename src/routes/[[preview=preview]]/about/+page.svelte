@@ -114,10 +114,10 @@
 
             <div class="w-full flex flex-col lg:flex-row justify-start">
                 <div class="lg:w-1/12">Email</div>
-                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="email" type="email"/>    
+                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="email" type="text"/>    
                 <div class="w-0 h-8 lg:h-0 lg:w-1/6"></div>
                 <div class="lg:w-1/12">Phone</div>
-                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="phone" type="phone"/>    
+                <input class="lg:w-4/12 border-[1px] rounded-[3px] text-dark border-light h-10 pl-6" name="phone" type="text"/>    
          
             </div>
 
