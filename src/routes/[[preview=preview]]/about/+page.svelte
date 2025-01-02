@@ -88,11 +88,11 @@
         <h2 class="text-primary">{content.headquarters_header}</h2>
     </ContentWidth>
     <ContentWidth class="flex flex-col mt-16">
-        <div class="flex flex-col lg:flex-row mb-10">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:flex-row mb-10">
             <PrismicImage field={content.hq_image_one} class="h-[500px] lg:w-3/4 object-cover lg:mr-5" />
             <PrismicImage field={content.hq_image_two} class="h-[500px] lg:w-1/4 object-cover lg:ml-5"/>
         </div>
-        <div class="flex flex-col lg:flex-row mb-10">
+        <div class="flex flex-col gap-10 lg:gap-0 lg:flex-row mb-10">
             <PrismicImage field={content.hq_image_three} class="h-[300px] lg:w-1/2 object-cover lg:mr-5" />
             <PrismicImage field={content.hq_image_four} class="h-[300px] lg:w-1/2 object-cover lg:ml-5"/>
         </div>
