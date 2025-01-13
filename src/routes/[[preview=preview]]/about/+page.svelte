@@ -36,7 +36,7 @@
     <ContentWidth class="flex flex-col lg:flex-row justify-start relative lg:h-[640px] gap-10" >
         <div class="lg:w-1/4 flex flex-col items-start justify-start gap-2 z-30" id="team-top">
             {#if active!==-1}
-                <button transition:fade={{duration:150}} onclick={()=>active=-1} class="hidden lg:flex flex-col items-start justify-start gap-2 text-white">
+                <button transition:fade={{duration:150}} onclick={()=>active=-1} class="hidden lg:flex flex-col items-start justify-start gap-2 ">
                     <PrismicImage class="w-full aspect-[3/4]" field={content.team_member[active].headshot} />
                     <h4>{content.team_member[active].name}</h4>
                     <h5>{content.team_member[active].title}</h5>
@@ -62,8 +62,8 @@
         {/each}
         <div class="w-full h-full absolute bg-light flex flex-col justify-start items-end z-20 pointer-events-none transition-opacity duration-150 {active===-1?"opacity-0":""}">
             {#if active>-1}
-                <div class=" text-white lg:w-2/3" in:fade={{duration:150, delay: 150}} out:fade={{duration:150}}>
-                    <button transition:fade={{duration:150}} onclick={()=>active=-1} class="flex lg:hidden flex-col items-start justify-start gap-2 text-white">
+                <div class="  lg:w-2/3" in:fade={{duration:150, delay: 150}} out:fade={{duration:150}}>
+                    <button transition:fade={{duration:150}} onclick={()=>active=-1} class="flex lg:hidden flex-col items-start justify-start gap-2 ">
                         <PrismicImage class="w-full aspect-[3/4]" field={content.team_member[active].headshot||''} />
                         <h4>{content.team_member[active].name}</h4>
                         <h5>{content.team_member[active].title}</h5>
