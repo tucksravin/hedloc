@@ -33,7 +33,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 </svelte:head>
 <svelte:window bind:innerWidth={viewportWidth} />
-<main>
+<main class="overflow-hidden>
 	<header class="absolute top-0 left-0 w-screen h-24 z-20">
 		<ContentWidth class="h-full flex flex-row justify-between items-center">
 			<a href="/" class="bump"><img src={viewportWidth> 768?logo:logoSmall} class="h-5 hover:opacity-80 transition-opacity" alt="hedloc investment co"/></a>
